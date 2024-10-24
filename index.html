@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- iOS Web App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Swiftload">
+    
+    <!-- iOS Icons -->
+    <link rel="apple-touch-icon" href="/api/placeholder/180/180">
+    <link rel="apple-touch-icon" sizes="152x152" href="/api/placeholder/152/152">
+    <link rel="apple-touch-icon" sizes="180x180" href="/api/placeholder/180/180">
+    <link rel="apple-touch-icon" sizes="167x167" href="/api/placeholder/167/167">
+    
+    <!-- Splash Screen Images -->
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="/api/placeholder/828/1792">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="/api/placeholder/1242/2688">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/api/placeholder/1125/2436">
+    
+    <title>Swiftload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: fixed;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .embed-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Verhindern von Overscroll-Effekten */
+        body {
+            overscroll-behavior-y: none;
+        }
+
+        /* iOS-spezifische Anpassungen */
+        @supports (-webkit-overflow-scrolling: touch) {
+            body {
+                padding-top: env(safe-area-inset-top);
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="embed-container">
+        <iframe 
+            src="https://swiftload.io"
+            allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>
